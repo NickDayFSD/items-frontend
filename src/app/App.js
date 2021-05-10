@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import ItemPage from '../items/ItemPage';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,23 +17,23 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Header/>
+          <Header />
           <main>
 
             <Switch>
               <Route path="/" exact={true}
                 render={routerProps => (
-                  <Home {...routerProps}/>
+                  <Home {...routerProps} />
                 )}
               />
 
-              <Route path="/resources" exact={true}
+              <Route path="/item" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <ItemPage {...routerProps} />
                 )}
               />
 
-              <Route path="/resources/:id"
+              <Route path="/item/:id"
                 render={routerProps => (
                   <div>Implement a page for id {routerProps.match.params.id}</div>
                 )}
@@ -42,7 +43,7 @@ class App extends Component {
 
             </Switch>
           </main>
-          <Footer/>
+          <Footer />
         </Router>
       </div>
     );
