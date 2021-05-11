@@ -13,7 +13,6 @@ export default class Item extends Component {
         <h2>{item.name}</h2>
         <p>{item.type}</p>
         <p>{item.rarity}</p>
-        <p>Requires attunement: {item.requiresAttunement}</p>
         <Link to={`/item-details/${item.id}`}>
           Details
         </Link>
