@@ -1,2 +1,2 @@
-/api/*  https://shielded-plains-95727.herokuapp.com/api/items/:splat
+/api/*  https://shielded-plains-95727.herokuapp.com/api/:splat
 /*    /index.html   200
