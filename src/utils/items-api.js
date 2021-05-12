@@ -13,7 +13,7 @@ export async function getItem(id) {
 }
 
 export async function addItem(item) {
-  const response = await (await request.post(URL)).send(item);
+  const response = await request.post(URL).send(item);
   return response.body;
 }
 
@@ -23,6 +23,6 @@ export async function deleteItem(id) {
 }
 
 export async function updateItem(item) {
-  const response = await (await request.put(`${URL}/${item.id}`)).send(item);
+  const response = await request.put(`${URL}/${item.id}`).send(item);
   return response.body;
 }

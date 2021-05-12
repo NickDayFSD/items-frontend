@@ -3,10 +3,10 @@ import './ItemForm.scss';
 
 export default class ItemForm extends Component {
   state = {
-    name: 'luckstone',
-    type: 'wonderous item',
-    rarity: 'rare',
-    attunementRequired: true,
+    name: 'Luckstone',
+    type: '',
+    rarity: '',
+    attunementRequired: false,
     description: 'gives you luck'
   }
 
@@ -14,6 +14,11 @@ export default class ItemForm extends Component {
     const { item } = this.props;
     if (!item) { return; }
     this.setState(item);
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.onSubmit(this.state);
   }
 
   handleChangeName = ({ target }) => {
@@ -26,7 +31,7 @@ export default class ItemForm extends Component {
     this.setState({ rarity: target.value });
   }
   handleChangeAttune = ({ target }) => {
-    this.setState({ attunementRequired: target.value });
+    this.setState({ attunementRequired: target.checked });
   }
   handleChangeDescription = ({ target }) => {
     this.setState({ description: target.value });
