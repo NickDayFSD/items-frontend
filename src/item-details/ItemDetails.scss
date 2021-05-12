@@ -1,0 +1,21 @@
+.ItemDetails {
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 15px 0;
+  }
+  a {
+    font-size: .9rem;
+    margin-right: 10px;
+  }
+  button.delete {
+    background: 0;
+    border: 0;
+    text-decoration: underline;
+    color: blue;
+    font-size: .9rem;
+    cursor: pointer;
+  }
+}

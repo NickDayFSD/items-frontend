@@ -34,6 +34,12 @@ class App extends Component {
                 )}
               />
 
+              <Route path="/item/add" exact={true}
+                render={routerProps => (
+                  <div>Add Page</div>
+                )}
+              />
+
               <Route path="/item-details/:id"
                 render={routerProps => (
                   <ItemDetails {...routerProps} />
