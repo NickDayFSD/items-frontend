@@ -1,0 +1,53 @@
+.ItemForm  {
+  background: #E89062;;
+  padding: 20px 50px;
+  max-width: 400px;
+  
+  p {
+    margin: 20px 0;
+  }
+
+  label span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: .85rem;
+    text-transform: uppercase;
+  }
+
+  input,  select,  button {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+  }
+
+  input[type=checkbox] {
+    margin-left: 0;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+  }
+
+  .vertically-centered {
+    display: flex;
+    align-items: center;
+    text-transform: initial;
+  }
+
+  select:invalid {
+    color: gray;
+  }
+
+  option:disabled {
+    color: gray;
+  }
+
+  button {
+    background: #65A7AB;
+    border: 1px solid #1F4E5C;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
