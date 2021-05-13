@@ -6,7 +6,7 @@ export default class ItemForm extends Component {
     name: 'Luckstone',
     type: '',
     rarity: '',
-    attunementRequired: false,
+    requiresAttunement: false,
     description: 'gives you luck'
   }
 
@@ -31,14 +31,14 @@ export default class ItemForm extends Component {
     this.setState({ rarity: target.value });
   }
   handleChangeAttune = ({ target }) => {
-    this.setState({ attunementRequired: target.checked });
+    this.setState({ requiresAttunement: target.checked });
   }
   handleChangeDescription = ({ target }) => {
     this.setState({ description: target.value });
   }
 
   render() {
-    const { name, type, rarity, attunementRequired, description } = this.state;
+    const { name, type, rarity, requiresAttunement, description } = this.state;
     const { item } = this.props;
 
     return (
@@ -84,7 +84,7 @@ export default class ItemForm extends Component {
           <label>
             <span>Requires Attunement</span>
             <span className="vertically-centered">
-              <input name="requiresAttunement" type="checkbox" value={attunementRequired} onChange={this.handleChangeAttune} /> Yes
+              <input name="requiresAttunement" type="checkbox" value={requiresAttunement} onChange={this.handleChangeAttune} /> Yes
             </span>
           </label>
         </p>

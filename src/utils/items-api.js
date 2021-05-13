@@ -13,6 +13,7 @@ export async function getItem(id) {
 }
 
 export async function addItem(item) {
+  debugger;
   const response = await request.post(URL).send(item);
   return response.body;
 }
