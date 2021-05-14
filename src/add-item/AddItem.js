@@ -14,7 +14,7 @@ export default class AddItem extends Component {
     try {
       this.setState({ loading: true });
       const newItem = await addItem(itemToAdd);
-      history.push(`/items/${newItem.id}`);
+      history.push(`/item-details/${newItem.id}`);
     }
     catch (err) {
       this.setState({ loading: false });

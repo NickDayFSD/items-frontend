@@ -3,11 +3,11 @@ import './ItemForm.scss';
 
 export default class ItemForm extends Component {
   state = {
-    name: 'Luckstone',
+    name: '',
     type: '',
     rarity: '',
     requiresAttunement: false,
-    description: 'gives you luck'
+    description: ''
   }
 
   componentDidMount() {
