@@ -24,7 +24,7 @@ export default class EditItem extends Component {
   }
 
   handleEdit = async itemToEdit => {
-    const { history } = this.page;
+    const { history, item } = this.page;
 
     try {
       this.setState({ loading: true });
