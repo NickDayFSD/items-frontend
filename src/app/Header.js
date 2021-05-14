@@ -12,6 +12,7 @@ class Header extends Component {
 
         <Link to={`/home`} class='myButton'> HOME </Link>
         <Link to={`/item`} class='myButton'> ITEMS </Link>
+        <Link to={`/item/add`} class='myButton'> NEW </Link>
 
       </header>
     );

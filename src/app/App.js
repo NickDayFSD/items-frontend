@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import ItemPage from '../items/ItemPage';
 import ItemDetails from '../item-details/ItemDetails';
+import AddItem from '../add-item/AddItem';
 import {
   BrowserRouter as Router,
   Route,
@@ -31,6 +32,12 @@ class App extends Component {
               <Route path="/item" exact={true}
                 render={routerProps => (
                   <ItemPage {...routerProps} />
+                )}
+              />
+
+              <Route path="/item/add" exact={true}
+                render={routerProps => (
+                  <AddItem {...routerProps} />
                 )}
               />
 
